@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bistro Galerie Mörlenbach</title>
+<style>
+:root{--bg:#0e0c0a;--gold:#b88a49;--gold2:#e7c888;--text:#fbf7f1;--muted:#d7ccbe;--line:rgba(255,255,255,.09);--shadow:0 24px 70px rgba(0,0,0,.34)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(180deg,#0b0a08,#15110e 55%,#0b0908);color:var(--text)}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:rgba(14,12,10,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.05)}nav{min-height:74px;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:800}.mark{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#efd59f,var(--gold));color:#1b140d;font-weight:900}.menu{display:flex;gap:24px;font-size:14px}
+.hero{min-height:680px;display:grid;align-items:center;background:radial-gradient(circle at 84% 20%,rgba(231,200,136,.15),transparent 18%),linear-gradient(110deg,#0d0b09,#19130f 58%,#0f0c0a)}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:76px 0}.eyebrow{display:inline-flex;padding:8px 14px;border-radius:999px;border:1px solid rgba(231,200,136,.28);background:rgba(231,200,136,.07);color:var(--gold2);font-size:12px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}h1{font-size:clamp(54px,7vw,92px);line-height:.97;letter-spacing:-3px;margin:18px 0 22px}h1 em{font-style:normal;background:linear-gradient(135deg,#f3dda9,#b88a49);-webkit-background-clip:text;color:transparent}.lead{font-size:19px;line-height:1.7;color:var(--muted)}.btn{display:inline-flex;min-height:50px;padding:0 20px;border-radius:14px;align-items:center;font-weight:800;background:linear-gradient(135deg,#efd59f,var(--gold));color:#1b140d;margin-top:28px}
+.hero-img{height:450px;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+.section{padding:86px 0}.light{background:linear-gradient(180deg,#f8f3eb,#eee4d5);color:#191612}.title{font-size:44px;letter-spacing:-1.4px;margin:14px 0 12px}.sub{max-width:720px;color:#74695e;line-height:1.7}
+.cards{display:grid;grid-template-columns:1.06fr .94fr;gap:22px;margin-top:34px}.card{padding:30px;border-radius:24px;border:1px solid var(--line);background:rgba(24,19,15,.94);box-shadow:var(--shadow)}.card h3{margin:0 0 22px;color:var(--gold2);font-size:25px}.hours{display:grid;grid-template-columns:1fr auto;gap:14px 22px;font-size:17px}.closed{color:#ffb69e}.contact{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)}.contact:last-child{border-bottom:0}.contact small{display:block;color:#9f9588;text-transform:uppercase;font-size:12px;margin-bottom:4px}
+.slider-shell{margin-top:34px;position:relative}.slider{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:28px;box-shadow:0 22px 55px rgba(0,0,0,.18);background:#16120e}.slider::-webkit-scrollbar{display:none}.slide{flex:0 0 100%;min-width:100%;height:560px;position:relative;scroll-snap-align:start;overflow:hidden}.slide img{width:100%;height:100%;object-fit:cover;display:block}.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(0,0,0,.72))}.caption{position:absolute;left:28px;right:28px;bottom:26px;z-index:2;color:#fff}.caption small{color:#ddc79f;text-transform:uppercase;letter-spacing:1.3px}.caption h3{font-size:32px;margin:7px 0 0}.slider-nav{display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap}.slider-nav a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #dacdbb;color:#221a14;font-weight:800}.hint{text-align:center;color:#766b5e;margin-top:12px;font-size:14px}
+.location{display:grid;grid-template-columns:1fr .9fr;gap:24px}.address{font-size:20px;line-height:1.7;color:#ddd3c6}.mapcard{min-height:300px;border-radius:26px;padding:28px;border:1px solid var(--line);background:linear-gradient(145deg,#2d2219,#17120e);box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between}
+footer{padding:34px 0 44px;color:#9a9084;border-top:1px solid rgba(255,255,255,.06);font-size:14px}
+@media(max-width:900px){.hero-grid,.cards,.location{grid-template-columns:1fr}.slide{height:460px}}
+@media(max-width:760px){.menu{display:none}.hero-grid{padding:58px 0}h1{font-size:52px}.title{font-size:36px}.section{padding:62px 0}.hero-img{height:340px}.slide{height:420px}.caption h3{font-size:25px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="#start"><span class="mark">BG</span>Bistro Galerie</a><div class="menu"><a href="#start">Start</a><a href="#zeiten">Öffnungszeiten</a><a href="#galerie">Galerie</a><a href="#anfahrt">Anfahrt</a></div></nav></div></header>
+<main id="start">
+<section class="hero"><div class="wrap hero-grid">
+<div><div class="eyebrow">Willkommen in Mörlenbach</div><h1>Gemütlich. Persönlich. <em>Bistro Galerie.</em></h1><p class="lead">Ein Ort zum Ankommen, Genießen und Zusammensitzen – mit herzlicher Atmosphäre und echten Einblicken aus dem Bistro.</p><a class="btn" href="tel:+4962097973411">☎ Jetzt anrufen</a></div>
+<div class="hero-img"><img src="assets/bistro-5.jpg" alt="Theke im Bistro Galerie"></div>
+</div></section>
+<section class="section" id="zeiten"><div class="wrap"><div class="eyebrow">Auf einen Blick</div><h2 class="title">Öffnungszeiten & Kontakt</h2><div class="cards">
+<div class="card"><h3>Öffnungszeiten</h3><div class="hours"><span>Montag</span><strong>ab 10:00 Uhr</strong><span>Dienstag</span><strong class="closed">Ruhetag</strong><span>Mittwoch</span><strong>ab 10:00 Uhr</strong><span>Donnerstag</span><strong>ab 10:00 Uhr</strong><span>Freitag</span><strong>ab 10:00 Uhr</strong><span>Samstag</span><strong>ab 10:00 Uhr</strong><span>Sonntag</span><strong>ab 10:00 Uhr</strong></div></div>
+<div class="card"><h3>Kontakt</h3><div class="contact"><small>Telefon</small><strong>06209 7973411</strong></div><div class="contact"><small>E-Mail</small><strong>ilona.keil@gmx.de</strong></div><div class="contact"><small>Inhaberin</small><strong>I. Keil</strong></div></div>
+</div></div></section>
+<section class="section light" id="galerie"><div class="wrap"><div class="eyebrow" style="color:#9c7137;border-color:#d8c7aa;background:#fff8">Echte Einblicke</div><h2 class="title">Bilder aus dem Bistro</h2><p class="sub">Auf dem Smartphone einfach nach links oder rechts wischen. Unten kannst du auch auf 1–5 tippen.</p>
+<div class="slider-shell"><div class="slider">
+<div class="slide" id="bild1"><img src="assets/bistro-3.jpg" alt="Sitzbereich"><div class="caption"><small>Bistro Galerie</small><h3>Gemütlicher Sitzbereich</h3></div></div>
+<div class="slide" id="bild2"><img src="assets/bistro-5.jpg" alt="Theke"><div class="caption"><small>Bistro Galerie</small><h3>Die Theke</h3></div></div>
+<div class="slide" id="bild3"><img src="assets/bistro-2.jpg" alt="Barbereich"><div class="caption"><small>Bistro Galerie</small><h3>Barbereich</h3></div></div>
+<div class="slide" id="bild4"><img src="assets/bistro-1.jpg" alt="Unterhaltungsbereich"><div class="caption"><small>Bistro Galerie</small><h3>Unterhaltung & Atmosphäre</h3></div></div>
+<div class="slide" id="bild5"><img src="assets/bistro-4.jpg" alt="Innenbereich"><div class="caption"><small>Bistro Galerie</small><h3>Weitere Plätze im Innenbereich</h3></div></div>
+</div><div class="slider-nav"><a href="#bild1">1</a><a href="#bild2">2</a><a href="#bild3">3</a><a href="#bild4">4</a><a href="#bild5">5</a></div><div class="hint">← Auf dem Bild nach links oder rechts wischen →</div></div>
+</div></section>
+<section class="section" id="anfahrt"><div class="wrap location">
+<div><div class="eyebrow">Unser Standort</div><h2 class="title">Mitten in Mörlenbach</h2><p class="address">Bistro Galerie<br>Weinheimer Straße 50<br>69509 Mörlenbach</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Weinheimer+Stra%C3%9Fe+50%2C+69509+M%C3%B6rlenbach">📍 Route öffnen</a></div>
+<div class="mapcard"><div style="font-size:34px">📍</div><div><small style="text-transform:uppercase;color:#cdbda8;letter-spacing:1.4px">Bistro Galerie</small><h3 style="font-size:34px;margin:8px 0">Weinheimer Straße 50</h3><div style="color:#bdb3a6">69509 Mörlenbach</div></div></div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Bistro Galerie Mörlenbach</div></footer>
+</body>
+</html>
